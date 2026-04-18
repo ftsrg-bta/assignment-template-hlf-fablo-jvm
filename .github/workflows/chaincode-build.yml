@@ -1,0 +1,31 @@
+---
+name: Chaincode Build
+
+
+on:
+  push:
+    paths: [chaincode/**]
+  pull_request:
+    paths: [chaincode/**]
+
+
+permissions:
+  contents: read
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: chaincode/
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: temurin
+          cache: gradle
+      - name: Build
+        run: ./gradlew build
