@@ -4,9 +4,9 @@ name: Chaincode Build
 
 on:
   push:
-    paths: [chaincode/**]
+    paths: [chaincode/**, .github/workflows/chaincode-build.yml]
   pull_request:
-    paths: [chaincode/**]
+    paths: [chaincode/**, .github/workflows/chaincode-build.yml]
 
 
 permissions:
