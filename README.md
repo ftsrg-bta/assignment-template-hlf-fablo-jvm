@@ -17,6 +17,12 @@
 * Network interaction script: [`scripts/cc.sh`](scripts/cc.sh)
 
 
+ ## Specification
+
+> [!IMPORTANT]
+> **You can find the assignment specification in [`specification.md`](specification.md).**
+
+
 ## Documentation
 
 **Place your assignment documentation in the [`docs/`](docs/) subdirectory.**
